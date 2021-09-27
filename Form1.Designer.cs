@@ -105,6 +105,7 @@
             this.btnVisa.TabIndex = 7;
             this.btnVisa.Text = "Visa värde";
             this.btnVisa.UseVisualStyleBackColor = true;
+            this.btnVisa.Click += new System.EventHandler(this.btnVisa_Click);
             // 
             // Form1
             // 

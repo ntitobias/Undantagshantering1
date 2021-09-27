@@ -24,22 +24,22 @@ namespace Undantagshantering1
         {
             // Läs in antal
             int antal;
-            bool antalOK = int.TryParse(tbxAntal.Text, out antal);
-
-            //Kontrollera inmatning
-            if (antalOK && antal > 0)
-                lista = new int[antal];
-            else
-            {
-                MessageBox.Show("Ange ett tal över 0.");
-                return;
-            }
+            antal = int.Parse(tbxAntal.Text);
 
             //Generera slumptal från 1 till 6
             for (int i =0; i < antal; i++)
             {
                 lista[i] = generator.Next(1, 7);
             }
+        }
+
+        private void btnVisa_Click(object sender, EventArgs e)
+        {
+            //Läs in index
+            int index = int.Parse(tbxIndex.Text);
+
+            //Visa det aktuella slumptalet
+            tbxVärde.Text = lista[index].ToString();
         }
     }
 }
